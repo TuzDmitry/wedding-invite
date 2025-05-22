@@ -29,8 +29,8 @@ const PageContent = ({guestTitle}: { guestTitle?: string }) => {
                     <h1 className='text-6xl font-allegro'>Дмитрий и Екатерина</h1>
                     <p className='text-2xl my-10'>июль |26|07|2025</p>
                 </header>
-                <p className='text-lg font-arial w-3/6 my-10 text-center'>"Самое главное и ценное в жизни-семья! Сначала
-                    в которой ты рождаешься, а потом, которую ты создаешь сам"</p>
+                <p className='text-lg font-arial w-3/6 my-10 text-center'>&#34;Самое главное и ценное в жизни-семья! Сначала
+                    в которой ты рождаешься, а потом, которую ты создаешь сам&#34;</p>
                 <div className='flex flex-col items-center border-[1.5px] border-black w-3/5 py-8'>
                     <h2 className="text-6xl font-allegro text-center">{title}</h2>
                     <p className='my-10 w-3/4 text-justify'>Приглашаем разделить с нами один из самых важных дней в жизни - нашу свадьбу!</p>
