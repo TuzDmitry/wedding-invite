@@ -7,4 +7,4 @@ export const GuestsTitleMap= {
     gd : 'Дорогие Жора и Диона',
 }
 
-export const data = {}
+export const guestIds = Object.keys(GuestsTitleMap);
