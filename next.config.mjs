@@ -4,9 +4,9 @@ const nextConfig = {
     trailingSlash: true,
     basePath: "/wedding-invite",
     assetPrefix: '/wedding-invite',
-    images: {
-        unoptimized: true,
-    },
+    // images: {
+    //     unoptimized: true,
+    // },
 };
 
 export default nextConfig;
