@@ -9,9 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out",
-    "build:gh": "GITHUB_PAGES=true next build && next export",
-    "build:vercel": "next build && next export"
+    "build:gh": "GITHUB_PAGES=true next build",
+    "deploy:gh": "gh-pages -d out",
+    "build:vercel": "next build"
   },
   "dependencies": {
     "next": "14.1.0",
