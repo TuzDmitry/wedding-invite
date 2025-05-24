@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
+
 const nextConfig = {
-    output: "export",
+    output: 'export',
     trailingSlash: true,
-    basePath: "",
-    assetPrefix: "",
-    // images: {
-    //     unoptimized: true,
-    // },
+    basePath: isGithubPages ? '/wedding-invite' : '',
+    assetPrefix: isGithubPages ? '/wedding-invite/' : '',
 };
 
 export default nextConfig;
