@@ -2,8 +2,8 @@
 const nextConfig = {
     output: "export",
     trailingSlash: true,
-    basePath: "/wedding-invite",
-    assetPrefix: '/wedding-invite',
+    basePath: "/",
+    assetPrefix: '/',
     // images: {
     //     unoptimized: true,
     // },
