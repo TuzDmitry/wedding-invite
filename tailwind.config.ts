@@ -12,11 +12,11 @@ const config: Config = {
   darkMode: 'class',
   plugins: [],
   theme: {
-    screens: {
-      md: '768px',
-      lg: '992px',
-      xl: '1200px',
-    },
+    // screens: {
+    //   sm: '768px',
+    //   lg: '992px',
+    //   xl: '1200px',
+    // },
     extend: {
       boxShadow: {
         base: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',

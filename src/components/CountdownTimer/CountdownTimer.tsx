@@ -22,7 +22,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ expiryTimestamp }) => {
     return (
         <div className="text-center p-4 rounded-2xl shadow-md inline-block">
             {isRunning ? (
-                <div className="flex justify-center gap-10 text-lg font-mono">
+                <div className="flex justify-center gap-5 sm:gap-10 font-mono">
                     <TimeBox label="Дней" value={days}/>
                     <div
                         className='border-l border-custom-gray-300 h-[60px] m-auto'
@@ -49,7 +49,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ expiryTimestamp }) => {
 
 const TimeBox = ({ label, value }: { label: string; value: number }) => (
     <div className="flex flex-col items-center font-arial">
-        <div className="text-6xl ">{value}</div>
+        <div className="text-4xl sm:text-6xl ">{value}</div>
         <div className="text-sm text-gray-500">{label}</div>
     </div>
 );
