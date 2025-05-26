@@ -23,6 +23,7 @@ export default function AnswerForm({invite_id}: { invite_id: string }) {
                 // errorMessage={formStateErrors.title?.join(", ")}
                 // isInvalid={!!formStateErrors.title}
                 name="rsvp_text"
+                maxLength={100}
                 required
             />
             {!state.success ?

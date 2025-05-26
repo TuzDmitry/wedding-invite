@@ -2,7 +2,7 @@
 const isGithubPages = process.env.GITHUB_PAGES === 'true';
 
 const nextConfig = {
-    output: 'export',
+    // output: 'export',
     trailingSlash: true,
     basePath: isGithubPages ? '/wedding-invite' : '',
     assetPrefix: isGithubPages ? '/wedding-invite/' : '',
