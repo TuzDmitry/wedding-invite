@@ -3,17 +3,22 @@ import PageContent from "@/components/PageContent";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
-    return guestIds.map((id) => ({ inviteId: id }));
+    return guestIds.map((id) => ({inviteId: id}));
 }
 
-export default function InvitePage({ params }: { params: { inviteId: string } }) {
-    const { inviteId } = params;
+export default function InvitePage({params}: { params: { inviteId: string } }) {
+    const {inviteId} = params;
 
-    // Если параметр невалидный — вызываем 404
     if (!guestIds.includes(inviteId)) {
-        notFound(); // ⛔️ важная строка
+        notFound();
     }
 
     const title = GuestsTitleMap[inviteId as keyof typeof GuestsTitleMap];
-    return <PageContent guestTitle={title} />;
+
+    return (
+        <PageContent
+            guestTitle={title}
+            inviteId={inviteId}
+        />
+    );
 }

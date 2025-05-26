@@ -12,11 +12,6 @@ const config: Config = {
   darkMode: 'class',
   plugins: [],
   theme: {
-    // screens: {
-    //   sm: '768px',
-    //   lg: '992px',
-    //   xl: '1200px',
-    // },
     extend: {
       boxShadow: {
         base: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
@@ -35,25 +30,6 @@ const config: Config = {
         'radio-dark': '0 0 0 2px #f1f5f9',
         10: '0px 0px 8px 0px #C86CC9 inset',
         'popup-message': '0 4px 20px rgba(0,0,0,0.2)',
-      },
-      colors: {
-        'dark-text': '#1A253E',
-        'light-primary': '#000000',
-        'grad-btn': {
-          stop: {
-            1: '#27005D',
-            2: '#A6A9DF',
-            3: '#903E8E',
-          },
-        },
-        'base': {
-          'textarea-dark': '#3B3B3D',
-          'dark-background': '#272727',
-          'dark-popover-background': '#52525B',
-          violet: {
-            50: '#C69EC5',
-          },
-        },
       },
       fontSize: {
         //in extend you can rewrite exact default setting or create new if such prop not exist
@@ -77,13 +53,9 @@ const config: Config = {
         ],
       },
       fontFamily: {
-        // TODO: Add Sofia font in here for using in tailwind
-        code: ['"Cutive Mono"'],
-        // platform: ['Sofia', 'sans-serif'],
         nunito: ['"Nunito"', 'sans-serif'],
         arial: ['"Arial"', 'sans-serif'],
         allegro: ['Allegro', 'cursive'],
-
       },
     },
   },
