@@ -37,7 +37,7 @@ export async function GET() {
         </style>
       </head>
       <body>
-        <h2>Last 10 Guest Responses</h2>
+        <h2>Guests Responses</h2>
         <table>
           <thead>
             <tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr>
