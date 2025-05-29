@@ -1,6 +1,9 @@
 import React from 'react';
-import CountdownTimer from "@/components/CountdownTimer";
-import AnswerForm from "@/components/AnswerForm";
+import dynamic from "next/dynamic";
+
+const CountdownTimer = dynamic(() => import('@/components/CountdownTimer'), {
+    ssr: false,
+});import AnswerForm from "@/components/AnswerForm";
 
 const programDay = [
     {
@@ -32,13 +35,12 @@ const PageContent = (
 
     return (
         <div
-            className="flex flex-col items-center pb-20 sm:p-20 bg-[#D0CABE] text-zinc-800"
+            className='flex flex-col items-center pb-20 sm:p-20 bg-[#D0CABE] text-zinc-800'
         >
             <section className='pb-10 bg-[#BFC2BD] flex flex-col items-center'>
                 <img src="/D_n_K.jpg" alt="no_image" className='scale-75'/>
-
                 <header className='flex flex-col items-center text-yellow-900'>
-                    <h1 className='text-[44px] sm:text-6xl font-allegro'>Дмитрий и Екатерина</h1>
+                    <h1 className='text-[44px] sm:text-6xl font-allegro text-center'>Дмитрий и Екатерина</h1>
                     <p className='text-2xl my-10'>июль |26|07|2025</p>
                 </header>
                 <p className='text-lg font-arial w-10/12 sm:w-3/6 my-10 text-center'>&#34;Самое главное и ценное в
@@ -46,7 +48,7 @@ const PageContent = (
                     в которой ты рождаешься, а потом, которую ты создаешь сам&#34;</p>
                 <div className='flex flex-col items-center border-[1.5px] border-black w-10/12 sm:w-3/5 py-8'>
                     <h2 className="text-[52px] sm:text-6xl font-allegro text-center">{title}</h2>
-                    <p className='my-10 w-3/4 text-justify'>Приглашаем разделить с нами один из самых важных дней в
+                    <p className='my-10 w-3/4 text-center'>Приглашаем разделить с нами один из самых важных дней в
                         жизни - нашу свадьбу!</p>
                 </div>
             </section>
@@ -70,7 +72,7 @@ const PageContent = (
                                         <a href={i.href}>
                                             <img
                                                 src="/link-icon.svg"
-                                                className='size-4 cursor-pointer shadow-1'
+                                                className='size-5 cursor-pointer shadow-1'
                                             />
                                         </a>)}
                                 </p>
@@ -85,14 +87,14 @@ const PageContent = (
                 <AnswerForm invite_id={inviteId}/>
             </section>
             <section className='flex flex-col items-center gap-5 pt-7 mb-10'>
-            <h2 className='text-[52px] sm:text-6xl font-allegro'>Контакты</h2>
+                <h2 className='text-[52px] sm:text-6xl font-allegro'>Контакты</h2>
                 <p>Жених: <a href='tel:+375 (33) 309-33-31' className='text-zinc-600'>+375 (33) 309-33-31</a></p>
                 <p>Невеста: <a href='tel:+375 (44) 599-78-58' className='text-zinc-600'>+375 (44) 599-78-58</a></p>
 
                 <p>По всем вопросам обращайтесь к нам.</p>
             </section>
             <footer className='flex flex-col items-center mt-8 text-[44px] sm:text-6xl font-allegro my-[50px]'>
-                <p>Дмитрий и Екатерина</p>
+                <p className='text-center'>Дмитрий и Екатерина</p>
             </footer>
             <section className='flex flex-col items-center'>
                 <h2 className="sm:text-lg mb-6 text-center max-w-[85%]">Будем счастливы видеть Вас на нашем свадебном

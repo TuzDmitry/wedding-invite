@@ -1,24 +1,26 @@
 import { supabase } from "@/lib/supabaseClient";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
-    const { data, error } = await supabase
+    const {data, error} = await supabase
         .from("guests-responses")
         .select("*")
-        .order("written_at", { ascending: false })
+        .order("written_at", {ascending: false})
         .limit(10);
 
     if (error) {
         return new NextResponse(`<p>Error: ${error.message}</p>`, {
             status: 500,
-            headers: { "Content-Type": "text/html" },
+            headers: {"Content-Type": "text/html"},
         });
     }
 
     if (!data || data.length === 0) {
         return new NextResponse("<p>No responses found.</p>", {
             status: 200,
-            headers: { "Content-Type": "text/html" },
+            headers: {"Content-Type": "text/html"},
         });
     }
 
@@ -27,6 +29,7 @@ export async function GET() {
     const tableHTML = `
     <html>
       <head>
+        <meta charset="UTF-8">
         <style>
           body { font-family: sans-serif; padding: 1rem; }
           table { border-collapse: collapse; width: 100%; }
@@ -57,6 +60,12 @@ export async function GET() {
 
     return new NextResponse(tableHTML, {
         status: 200,
-        headers: { "Content-Type": "text/html" },
+        headers: {
+            "Content-Type": "text/html; charset=utf-8",
+            "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "0",
+            "Surrogate-Control": "no-store"
+        },
     });
 }
