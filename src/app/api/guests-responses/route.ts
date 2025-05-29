@@ -7,8 +7,7 @@ export async function GET() {
     const {data, error} = await supabase
         .from("guests-responses")
         .select("*")
-        .order("written_at", {ascending: false})
-        .limit(10);
+        .order("written_at", {ascending: false});
 
     if (error) {
         return new NextResponse(`<p>Error: ${error.message}</p>`, {
