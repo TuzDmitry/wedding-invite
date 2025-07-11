@@ -13,7 +13,8 @@ export const GuestsTitleMap= {
     am : 'Дорогие Анатолий и Мария',
     koch : 'Дорогая семья Кочериных',
     lena : 'Дорогая Елена',
-    il : 'Дорогие Игорь и Людмила'
+    il : 'Дорогие Игорь и Людмила',
+    ea : 'Дорогие Егор и Алекстандра'
 }
 
 export const guestIds = Object.keys(GuestsTitleMap);
