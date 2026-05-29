@@ -1,6 +1,8 @@
 import { guestIds, GuestsTitleMap } from "@/state";
 import PageContent from "@/components/PageContent";
-import { notFound } from "next/navigation";
+
+// 🌟 Говорим Next.js: "Если ID нет в generateStaticParams, сразу отдавай 404"
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
     return guestIds.map((id) => ({inviteId: id}));
@@ -9,9 +11,6 @@ export async function generateStaticParams() {
 export default function InvitePage({params}: { params: { inviteId: string } }) {
     const {inviteId} = params;
 
-    if (!guestIds.includes(inviteId)) {
-        notFound();
-    }
 
     const title = GuestsTitleMap[inviteId as keyof typeof GuestsTitleMap];
 
