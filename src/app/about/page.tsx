@@ -1,9 +1,13 @@
+import pkg from '../../../package.json';
+
 export const metadata = {
     title: "О проекте",
     description: "Информация о проекте управления приглашениями на свадьбу",
 };
 
 export default async function About() {
+    const version: string = pkg.version;
+
     return (
         <div className="p-4">
             <h1 className="text-2xl font-bold mb-4">О проекте</h1>
@@ -20,6 +24,9 @@ export default async function About() {
                 <li>TypeScript для типизации</li>
                 <li>Tailwind CSS для стилизации</li>
             </ul>
+            <p className="mt-4 text-sm text-gray-600">
+                Версия приложения: <strong>{version}</strong>
+            </p>
             <p>
                 Если у вас есть вопросы или предложения, пожалуйста, свяжитесь с нами!
             </p>

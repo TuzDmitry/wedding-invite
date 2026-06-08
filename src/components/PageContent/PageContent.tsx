@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import dynamic from "next/dynamic";
 
 const CountdownTimer = dynamic(() => import('@/components/CountdownTimer'), {
@@ -39,7 +40,7 @@ const PageContent = (
             className='flex flex-col items-center pb-20 sm:p-20 bg-[#D0CABE] text-zinc-800'
         >
             <section className='pb-10 bg-[#BFC2BD] flex flex-col items-center'>
-                <img src="/D_n_K.jpg" alt="no_image" className='scale-75'/>
+                <Image src="/D_n_K.jpg" alt="no_image" className='scale-75' width={964} height={1280} sizes="100vw"/>
                 <header className='flex flex-col items-center text-yellow-900'>
                     <h1 className='text-[44px] sm:text-6xl font-allegro text-center'>Дмитрий и Екатерина</h1>
                     <p className='text-2xl my-10'>июль |26|07|2025</p>
