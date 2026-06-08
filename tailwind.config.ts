@@ -53,9 +53,8 @@ const config: Config = {
         ],
       },
       fontFamily: {
-        nunito: ['"Nunito"', 'sans-serif'],
         arial: ['"Arial"', 'sans-serif'],
-        allegro: ['Allegro', 'cursive'],
+        allegro: ['var(--font-allegro)', 'cursive'],
       },
     },
   },
