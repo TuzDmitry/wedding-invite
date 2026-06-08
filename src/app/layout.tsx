@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wedding invite App",
+  title: "Свадьба Дмитрия и Екатерины!",
   description: "Wedding invite application",
   icons: [{
     url: '/wedding-rings.svg',
