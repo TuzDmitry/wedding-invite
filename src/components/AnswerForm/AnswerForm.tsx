@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { useFormState } from "react-dom";
+import { useFormState } from "react-dom"; //TODO: replace to useActionState
 import ReCAPTCHA from "react-google-recaptcha";
 
 import { saveGuest } from "@/app/actions/saveGuest";
@@ -37,24 +37,25 @@ export default function AnswerForm({invite_id}: { invite_id: string }) {
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
                 size="invisible"
             />
-            <h3 className="text-lg">Уточните ваше присутвие</h3>
+            <label htmlFor="rsvp_input" className="text-lg">Уточните ваше присутвие</label>
             <input
+                id="rsvp_input"
                 className="bg-transparent outline-none border-[1.5px] border-black p-3 w-full mb-4"
                 disabled={state.success}
                 name="rsvp_text"
                 maxLength={100}
                 required
+                placeholder="Например: Буду обязательно / Не смогу прийти"
+                autoComplete="off"
             />
-
             <input
                 type="hidden"
                 name="g-recaptcha-response"
                 ref={hiddenTokenRef}
             />
-
             {!state.success ? (
                 <button
-                    type="button"
+                    type="button" //TODO: try with preventDefault + submit
                     onClick={handleSubmit}
                     className="border-[1.5px] border-black hover:border-zinc-700 p-3 shadow-8 text-zinc-950 hover:text-zinc-700"
                 >
