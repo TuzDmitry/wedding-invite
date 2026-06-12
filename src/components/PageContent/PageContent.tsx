@@ -24,7 +24,12 @@ const programDay = [
         title: 'Завершение вечера',
         time: '23:00',
     },
-]
+];
+
+//TODO: заменить img и a на компоненты next.
+//TODO: AI задача настроить линтер и претир для всего проекта.
+//TODO: AI задача обновить версии пакетов до последних
+
 const PageContent = (
     {
         inviteId,
@@ -57,8 +62,6 @@ const PageContent = (
 
             <section className='flex flex-col items-center pt-7'>
                 <h1 className='text-[52px] sm:text-6xl font-allegro'>Программа дня</h1>
-
-
                 <div className='sm:pl-10 max-w-[85%] sm:max-w-full'>
                     {programDay.map(i => (
                         <div
