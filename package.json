@@ -1,6 +1,6 @@
 {
   "name": "next14js-fe",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "private": true,
   "homepage": "https://tuzdmitry.github.io/wedding-invite",
   "scripts": {
@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "analyze": "ANALYZE=true npm run build",
     "predeploy": "npm run build",
     "build:gh": "GITHUB_PAGES=true next build",
     "deploy:gh": "gh-pages -d out",
@@ -24,6 +25,7 @@
     "react-timer-hook": "^4.0.5"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.2.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -31,9 +33,9 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "gh-pages": "^6.3.0",
+    "husky": "^8.0.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5",
-    "husky": "^8.0.0"
+    "typescript": "^5"
   }
 }

@@ -29,7 +29,7 @@ const programDay = [
 //TODO: заменить img и a на компоненты next.
 //TODO: AI задача настроить линтер и претир для всего проекта.
 //TODO: AI задача обновить версии пакетов до последних
-
+//TODO: добавить CI github actions
 const PageContent = (
     {
         inviteId,
