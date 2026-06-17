@@ -5,7 +5,10 @@ import dynamic from "next/dynamic";
 const CountdownTimer = dynamic(() => import('@/components/CountdownTimer'), {
     ssr: false,
 });
-import AnswerForm from "@/components/AnswerForm";
+
+const AnswerForm = dynamic(() => import('@/components/AnswerForm'), {
+    ssr: false,
+});
 
 const programDay = [
     {
