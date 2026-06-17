@@ -102,7 +102,9 @@ const PageContent = (
                 <p>По всем вопросам обращайтесь к нам.</p>
             </section>
             <footer className='flex flex-col items-center mt-8 text-[44px] sm:text-6xl font-allegro my-[50px]'>
-                <p className='text-center'>Дмитрий и Екатерина</p>
+                <p className='text-center'>
+                    Дмитрий и Екатерина
+                </p>
             </footer>
             <section className='flex flex-col items-center'>
                 <h2 className="sm:text-lg mb-6 text-center max-w-[85%]">Будем счастливы видеть Вас на нашем свадебном
